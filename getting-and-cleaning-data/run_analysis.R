@@ -2,17 +2,17 @@
 
 # 1. Merges the training and the test sets to create one data set.
 
-tmp1 <- read.table("train/X_train.txt")
-tmp2 <- read.table("test/X_test.txt")
-X <- rbind(tmp1, tmp2)
+temp1 <- read.table("train/X_train.txt")
+temp2 <- read.table("test/X_test.txt")
+X <- rbind(temp1, temp2)
 
-tmp1 <- read.table("train/subject_train.txt")
-tmp2 <- read.table("test/subject_test.txt")
-S <- rbind(tmp1, tmp2)
+temp1 <- read.table("train/subject_train.txt")
+temp2 <- read.table("test/subject_test.txt")
+S <- rbind(temp1, temp2)
 
-tmp1 <- read.table("train/y_train.txt")
-tmp2 <- read.table("test/y_test.txt")
-Y <- rbind(tmp1, tmp2)
+temp1 <- read.table("train/y_train.txt")
+temp2 <- read.table("test/y_test.txt")
+Y <- rbind(temp1, temp2)
 
 # 2. Extracts the mean and standard deviation for each measurement.
 
@@ -54,4 +54,4 @@ for (s in 1:numSubjects) {
         row = row+1
     }
 }
-write.table(result, "data_averages.txt")
+write.table(result, "data_set_with_the_averages.txt")
